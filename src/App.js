@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {Component, useState, useEffect} from "react";
+import MarkeredMap from "./components/MarkeredMap/MarkeredMap";
+import HotelsList from "./components/HotelsList/HotelsList";
+import {HotelListContextProvider} from "./context/HotelListContext/HotelListContext";
+
+// Did you wrap <GoogleMap> component with withGoogleMap() HOC?
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <React.Fragment>
+            <div className="App">
+                <div className="topContent">
+                </div>
+                <div className="leftContent">
+                    <HotelListContextProvider>
+                        <HotelsList/>
+                    </HotelListContextProvider>
+                </div>
+                <div className="rightContent">
+                    <MarkeredMap/>
+                </div>
+            </div>
+        </React.Fragment>
+    );
 }
 
 export default App;
