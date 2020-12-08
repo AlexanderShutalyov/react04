@@ -1,18 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import MyMapComponent from "../MyMapComponent/MyMapComponent";
 import "./MarkeredMap.css"
 
 const MarkeredMap = () => {
-    let geo = [
-        {
-            lat: -34.397,
-            lng: 150.644
-        },
-        {
-            lat: -34.290,
-            lng: 151.244
-        }
-    ];
+
     let isMarkerShown = true;
     return (
         <div className="MapContainer">

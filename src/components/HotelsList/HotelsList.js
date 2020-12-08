@@ -5,7 +5,6 @@ import HotelItem from "../HotelItem/HotelItem";
 
 const HotelsList = () => {
     const {hotels, setHotelsData} = useContext(HotelListContext);
-
     return (
         <div>
             {hotels && hotels.map((props, index) => (<HotelItem key={index} props={props}/>))}

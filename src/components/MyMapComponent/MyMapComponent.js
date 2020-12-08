@@ -1,13 +1,15 @@
 import {GoogleMap, Marker, withGoogleMap, withScriptjs} from "react-google-maps";
-
+import {useContext} from "react";
+import {HotelListContext} from "../../context/HotelListContext/HotelListContext";
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) => {
-        console.log(props)
-       return <GoogleMap
+    const {hotels, setHotelsData} = useContext(HotelListContext);
+
+    return <GoogleMap
             defaultZoom={8}
-            defaultCenter={{lat: -34.397, lng: 150.644}}
+            defaultCenter={{lat: 40.669612, lng: -73.811325}}
         >
-            {props.isMarkerShown && props.geo.map((props, index) => (<Marker key={index} position={{ lat: props.lat, lng: props.lng }} />))}
+            {props.isMarkerShown && hotels.map((props, index) => (<Marker key={index} position={{ lat: props.coordinate.lat, lng: props.coordinate.lon }} />))}
         </GoogleMap>
     }
 ));

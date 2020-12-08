@@ -2,9 +2,8 @@ import React, {useContext} from 'react';
 import './HotelItem.css';
 import HotelItemFeatures from "../HotelItemFeature/HotelItemFeature";
 
-import {HotelListContext} from '../../context/HotelListContext/HotelListContext'
-
 const HotelItem = ( {props} ) => {
+
     const features = props.ratePlan.features;
 
     return (

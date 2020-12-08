@@ -7,18 +7,18 @@ import {HotelListContextProvider} from "./context/HotelListContext/HotelListCont
 function App() {
     return (
         <React.Fragment>
+            <HotelListContextProvider>
             <div className="App">
                 <div className="topContent">
                 </div>
                 <div className="leftContent">
-                    <HotelListContextProvider>
                         <HotelsList/>
-                    </HotelListContextProvider>
                 </div>
                 <div className="rightContent">
                     <MarkeredMap/>
                 </div>
             </div>
+            </HotelListContextProvider>
         </React.Fragment>
     );
 }
