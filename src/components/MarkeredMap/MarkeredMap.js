@@ -1,6 +1,6 @@
 import React from 'react';
 import MyMapComponent from "../MyMapComponent/MyMapComponent";
-
+import "./MarkeredMap.css"
 
 const MarkeredMap = () => {
     let geo = [
@@ -15,7 +15,7 @@ const MarkeredMap = () => {
     ];
     let isMarkerShown = true;
     return (
-        <div>
+        <div className="MapContainer">
             <MyMapComponent
                 isMarkerShown={isMarkerShown}
                 geo={geo}

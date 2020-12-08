@@ -1,0 +1,21 @@
+.HotelItemClass {
+    width: 100%;
+    height: 150px;
+    border-bottom: black solid;
+}
+
+.thumbnail {
+    height: 150px;
+    width: 150px;
+    display:inline-block;
+}
+
+.HotelItemContent {
+    height: 100px;
+    width: 200px;
+    display:inline-block;
+}
+
+.HotelItemContent p {
+    font-size: 70%;
+}

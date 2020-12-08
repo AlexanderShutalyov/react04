@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: absolute;
 }
 
 .App-logo {
@@ -44,6 +45,8 @@
 }
 .rightContent {
   width: 50%;
-  height: 500px;
+  height: 100%;
   display:inline-block;
+  text-align: start;
+  position: relative;
 }

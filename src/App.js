@@ -4,8 +4,6 @@ import MarkeredMap from "./components/MarkeredMap/MarkeredMap";
 import HotelsList from "./components/HotelsList/HotelsList";
 import {HotelListContextProvider} from "./context/HotelListContext/HotelListContext";
 
-// Did you wrap <GoogleMap> component with withGoogleMap() HOC?
-
 function App() {
     return (
         <React.Fragment>
