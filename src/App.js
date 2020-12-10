@@ -10,7 +10,7 @@ function App() {
             <HotelListContextProvider>
                 <div className="App">
                     <div className="topContent">
-                        AAAAAAAAAAAAAAA
+                        MENU
                     </div>
                     <div className="mainContent">
                         <div className="leftContent">
