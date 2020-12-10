@@ -8,10 +8,11 @@ function App() {
     return (
         <React.Fragment>
             <HotelListContextProvider>
-                <div>
-                    <div className="App">
-                        <div className="topContent">
-                        </div>
+                <div className="App">
+                    <div className="topContent">
+                        AAAAAAAAAAAAAAA
+                    </div>
+                    <div className="mainContent">
                         <div className="leftContent">
                             <HotelsList/>
                         </div>

@@ -1,6 +1,4 @@
 .MapContainer {
     padding: 3px;
-    position: relative;
-    left: 5px;
-    top: 20px;
+    position: fixed;
 }
