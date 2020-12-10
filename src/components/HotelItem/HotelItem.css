@@ -1,17 +1,28 @@
 .HotelItemClass {
     width: 100%;
     height: 150px;
-    border-bottom: black solid;
+    border: black solid 1px;
+    border-radius: 15px;
 }
 
 .thumbnail {
-    height: 150px;
-    width: 150px;
+    position: relative;
+    left: 5px;
+    top: 20px;
+    float: left;
+    margin-left: 1px;
     display:inline-block;
+    margin-right: 10px;
+}
+.thumbnail img {
+    width: 200px;
+    display:inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .HotelItemContent {
-    height: 100px;
+    height: 200px;
     width: 200px;
     display:inline-block;
 }

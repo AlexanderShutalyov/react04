@@ -9,7 +9,7 @@ const HotelItem = ( {props} ) => {
     return (
         <div className="HotelItemClass">
             <div className="thumbnail">
-                <img src={props.thumbnailUrl} width="100" height="100"/>
+                <img src={props.thumbnailUrl}/>
             </div>
             <div className="HotelItemContent">
                 <p>{props.name}</p>

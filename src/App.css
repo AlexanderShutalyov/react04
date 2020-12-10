@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /*text-align: center;*/
   position: absolute;
 }
 
@@ -40,13 +40,14 @@
 
 .leftContent {
   width: 50%;
-  height: 500px;
+  height: 100%;
   display:inline-block;
 }
 .rightContent {
+
+  float: top;
+  position: relative;
   width: 50%;
   height: 100%;
   display:inline-block;
-  text-align: start;
-  position: relative;
 }
