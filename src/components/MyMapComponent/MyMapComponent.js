@@ -23,11 +23,3 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) => {
 ));
 
 export default MyMapComponent;
-
-// let currentCenter;
-// if ("geolocation" in navigator) {
-//     navigator.geolocation.getCurrentPosition(function(position) {
-//         currentCenter = {lat: position.coords.latitude, lng: position.coords.longitude}
-//     });
-// }
-// const defaultCenter = hotels.length > 0 ? {lat: hotels[0].coordinate.lat, lng: hotels[0].coordinate.lon} ? currentCenter : ;
