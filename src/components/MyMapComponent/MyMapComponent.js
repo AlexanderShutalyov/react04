@@ -4,7 +4,14 @@ import {HotelListContext} from "../../context/HotelListContext/HotelListContext"
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) => {
     const {hotels, setHotelsData} = useContext(HotelListContext);
-    const defaultCenter = hotels.length > 0 ? {lat: hotels[0].coordinate.lat, lng: hotels[0].coordinate.lon} : {lat: 40.669612, lng: -73.811325};
+    let currentCenter = {lat: 40.669612, lng: -73.811325};
+    // Try to get current geolocation
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            currentCenter = {lat: position.coords.latitude, lng: position.coords.longitude}
+        });
+    }
+    const defaultCenter = hotels.length > 0 ? {lat: hotels[0].coordinate.lat, lng: hotels[0].coordinate.lon} : currentCenter;
 
     return <GoogleMap
             defaultZoom={8}
@@ -16,3 +23,11 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) => {
 ));
 
 export default MyMapComponent;
+
+// let currentCenter;
+// if ("geolocation" in navigator) {
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//         currentCenter = {lat: position.coords.latitude, lng: position.coords.longitude}
+//     });
+// }
+// const defaultCenter = hotels.length > 0 ? {lat: hotels[0].coordinate.lat, lng: hotels[0].coordinate.lon} ? currentCenter : ;
